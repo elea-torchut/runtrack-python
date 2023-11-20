@@ -1,5 +1,5 @@
 nom = "Smartphone XYZ"
-prix = 499
+prix = 500
 quantite = 50
 
 print(f"Nom : {nom}")
