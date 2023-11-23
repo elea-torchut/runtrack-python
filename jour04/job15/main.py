@@ -10,9 +10,14 @@ def tri_a_bulles(liste):
                 liste[j], liste[j+1] = liste[j+1], liste[j]
 
 def arrondir_nombres(liste):
-    for i in range(len(liste)):
-        liste[i] = int(liste[i] + 0.5)
-
+    i = 0
+    try:
+        while True:
+            liste[i] = int(liste[i] + 0.5)
+            i += 1
+    except IndexError:
+        pass
+    
 liste_nombres = [22.4, 4.0, 16.22, 9.10, 11.00, 12.22, 14.20, 5.20, 17.50]
 print("Avant arrondi et tri :", liste_nombres)
 
