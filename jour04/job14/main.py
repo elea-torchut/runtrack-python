@@ -6,7 +6,12 @@ def my_long_word(longueur_minimale, chaine):
         if caractere.isalpha() or caractere == chaine[-1]:
             mot_actuel += caractere
         else:
-            if len(mot_actuel) > longueur_minimale:
+            # Utiliser une boucle for pour compter les caractères sans utiliser len
+            longueur_mot = 0
+            for _ in mot_actuel:
+                longueur_mot += 1
+            
+            if longueur_mot > longueur_minimale:
                 resultats.append(mot_actuel)
 
             mot_actuel = ''
