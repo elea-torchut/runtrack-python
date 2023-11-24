@@ -1,14 +1,11 @@
-# Variables
-L = int(input("Veuillez entrer la longueur : "))
-C = int(input("Veuillez entrer la largeur : "))
+def dessiner_rectangle(longueur, largeur):
+    print("|" + "-" * (longueur - 2) + "|")
 
-# Script carré
-for i in range(L):
-    for j in range(C):
-        if i == 0 or i == L - 1:
-            print("-", end=" ")
-        elif j == 0 or j == C - 1:
-            print("|", end=" ")
-        else:
-            print(" ", end=" ")
-    print()
+    for i in range(largeur - 2):
+        print("|" + " " * (longueur - 2) + "|")
+
+    print("|" + "-" * (longueur - 2) + "|")
+
+longueur = int (input("Veillez entrer votre longueur : "))
+largeur = int (input("Veillez entrer votre largeur : "))
+dessiner_rectangle(longueur, largeur)
